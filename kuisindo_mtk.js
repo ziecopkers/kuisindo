@@ -279,7 +279,7 @@
       buildQuizResults: function () {
         var resultsHTML = '',
           correctAnswerCount = 0,
-          totalScore;
+          totalScore.toFixed();
 
         function _checkAnswers() {
           //check each questions data
@@ -296,7 +296,6 @@
             }
           } );
           totalScore = ( correctAnswerCount / questionCount ) * 100;
-          totalScore.toFixed();
         }
         _checkAnswers();
         /* build quiz results
