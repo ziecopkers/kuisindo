@@ -3,7 +3,7 @@
  * author  : Chyno Deluxe
  * version : 1.0.0
  *
- * Penjelasan dan beberapa kalimat diubah kedalam bahasa Indonesia oleh saya (Kangibay.net)
+ * Penjelasan dan beberapa kalimat diubah kedalam bahasa Indonesia oleh saya (Moccatory)
  * Penambahan score dihasil akhir, agar user yang mengerjakan quiz tau berapa nilai yang didapat
  *
  * copyright (c) 2016 Chyno Deluxe - http://www.chynodeluxe.com
@@ -43,12 +43,12 @@
         quizScore_text: "Kamu menjawab %totalScore dari %totalQuestions pertanyaan dengan benar.",
         quizScoreMessage_text: "",
         quizScoreRank_text: {
-          a: "Nilai Sempurna! Anda lulus ujian Matematika",
-          b: "Hampir! Anda lulus ujian Matematika",
-          c: "Anda tidak lulus ujian Matematika",
-          d: "Anda tidak lulus ujian Matematika",
-          f: "Anda tidak lulus ujian Matematika",
-          g: "Selamat! Anda lulus ujian Matematika"
+          a: "Nilai Sempurna!",
+          b: "Kerja Bagus!",
+          c: "Setidaknya kamu enggak gagal",
+          d: "Kamu harus belajar lebih giat",
+          f: "Kamu serius waktu ngerjain quiz ini?",
+          g: "Sedikit lagi.."
         },
 
         /* Options
@@ -279,6 +279,7 @@
       buildQuizResults: function () {
         var resultsHTML = '',
           correctAnswerCount = 0,
+          totalScore;
 
         function _checkAnswers() {
           //check each questions data
@@ -327,7 +328,7 @@
         //quiz score total
         resultsHTML += '<p class="' + class_quizScore + '">';
         resultsHTML += plugin.config.quizScore_text
-          .replace( '%totalScore.toFixed(0)', correctAnswerCount )
+          .replace( '%totalScore', correctAnswerCount )
           .replace( '%totalQuestions', questionCount );
         resultsHTML += '</p>';
         //quiz score message
