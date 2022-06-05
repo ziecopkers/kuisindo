@@ -279,7 +279,6 @@
       buildQuizResults: function () {
         var resultsHTML = '',
           correctAnswerCount = 0,
-          totalScore.toFixed();
 
         function _checkAnswers() {
           //check each questions data
@@ -328,7 +327,7 @@
         //quiz score total
         resultsHTML += '<p class="' + class_quizScore + '">';
         resultsHTML += plugin.config.quizScore_text
-          .replace( '%totalScore', correctAnswerCount )
+          .replace( '%totalScore.toFixed()', correctAnswerCount )
           .replace( '%totalQuestions', questionCount );
         resultsHTML += '</p>';
         //quiz score message
