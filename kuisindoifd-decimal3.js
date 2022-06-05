@@ -296,7 +296,6 @@
             }
           } );
           totalScore = ( correctAnswerCount / questionCount ) * 100;
-	  totalScore.toFixed(0);
         }
         _checkAnswers();
         /* build quiz results
