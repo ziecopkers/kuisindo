@@ -294,7 +294,7 @@
               correctAnswerCount = correctAnswerCount;
             }
           } );
-          totalScore = ( correctAnswerCount / questionCount ) * 10;
+          totalScore = ( correctAnswerCount / questionCount ) * 10000;
         }
         _checkAnswers();
         /* build quiz results
