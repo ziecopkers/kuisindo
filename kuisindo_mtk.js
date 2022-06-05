@@ -327,7 +327,7 @@
         //quiz score total
         resultsHTML += '<p class="' + class_quizScore + '">';
         resultsHTML += plugin.config.quizScore_text
-          .replace( '%totalScore.toFixed()', correctAnswerCount )
+          .replace( '%totalScore.toFixed(0)', correctAnswerCount )
           .replace( '%totalQuestions', questionCount );
         resultsHTML += '</p>';
         //quiz score message
